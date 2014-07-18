@@ -1,5 +1,5 @@
 {
-    "version": "1.0.2",
+    "version": "1.1.0",
     "name": "elnebuloso\/flex-view",
     "type": "library",
     "license": "MIT",
@@ -16,7 +16,8 @@
         }
     ],
     "require": {
-        "php": ">=5.3.3"
+        "php": ">=5.3.3",
+        "elnebuloso\/flex-converter": "1.*"
     },
     "autoload": {
         "psr-0": {
