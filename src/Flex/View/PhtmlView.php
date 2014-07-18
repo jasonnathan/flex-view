@@ -60,6 +60,8 @@ class PhtmlView extends AbstractView implements ViewInterface {
     }
 
     /**
+     * returns the body of the view
+     *
      * @return string
      * @throws ViewException
      */
@@ -97,6 +99,8 @@ class PhtmlView extends AbstractView implements ViewInterface {
     }
 
     /**
+     * returns the response headers for the view
+     *
      * @return array
      */
     public function getResponseHeaders() {

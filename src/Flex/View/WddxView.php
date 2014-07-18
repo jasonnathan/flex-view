@@ -10,6 +10,8 @@ namespace Flex\View;
 class WddxView extends AbstractView implements ViewInterface {
 
     /**
+     * returns the body of the view
+     *
      * @return string
      */
     public function getBody() {
@@ -17,6 +19,8 @@ class WddxView extends AbstractView implements ViewInterface {
     }
 
     /**
+     * returns the response headers for the view
+     *
      * @return array
      */
     public function getResponseHeaders() {
