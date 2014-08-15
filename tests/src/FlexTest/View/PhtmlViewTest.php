@@ -31,74 +31,74 @@ class PhtmlViewTest extends \PHPUnit_Framework_TestCase {
     }
 
     /**
-     * @return void
+     * @test
      */
-    public function test_setBasePath() {
+    public function setBasePath() {
         $expexted = 'foo/bar/baz';
         $this->view->setBasePath($expexted);
         $this->assertEquals($expexted, $this->view->getBasePath());
     }
 
     /**
-     * @return void
+     * @test
      * @expectedException \Flex\View\Exception\ViewException
      * @expectedExceptionMessage missing base path
      */
-    public function test_setBasePathEmpty() {
+    public function setBasePathEmpty() {
         $this->view->setBasePath('  ');
     }
 
     /**
-     * @return void
+     * @test
      */
-    public function test_setTemplate() {
+    public function setTemplate() {
         $expexted = 'template';
         $this->view->setTemplate($expexted);
         $this->assertEquals($expexted, $this->view->getTemplate());
     }
 
     /**
-     * @return void
+     * @test
      * @expectedException \Flex\View\Exception\ViewException
      * @expectedExceptionMessage missing template
      */
-    public function test_setTemplateEmpty() {
+    public function setTemplateEmpty() {
         $this->view->setTemplate('  ');
     }
 
     /**
-     * @return void
+     * @test
      * @expectedException \Flex\View\Exception\ViewException
      * @expectedExceptionMessage missing view base path
      */
-    public function test_getBodyInvalidBasePath() {
+    public function getBodyInvalidBasePath() {
         $this->view->getBody();
     }
 
     /**
-     * @return void
+     * @test
      * @expectedException \Flex\View\Exception\ViewException
      * @expectedExceptionMessage missing template
      */
-    public function test_getBodyInvalidTemplate() {
+    public function getBodyInvalidTemplate() {
         $this->view->setBasePath('tests/resources');
         $this->view->getBody();
     }
 
     /**
-     * @return void
+     * @test
      * @expectedException \Flex\View\Exception\ViewException
      */
-    public function test_getBodyInvalidView() {
+    public function getBodyInvalidView() {
         $this->view->setBasePath('tests/resources');
         $this->view->setTemplate('views/script-not-found.phtml');
         $this->view->getBody();
     }
 
     /**
-     * @return void
+     * @test
      */
-    public function test_getBody() {
+    public function getBody() {
         $this->view->setBasePath('tests/resources');
         $this->view->setTemplate('views/unit-testing/profile-settings.phtml');
         $this->view->name = 'foo';
@@ -106,9 +106,9 @@ class PhtmlViewTest extends \PHPUnit_Framework_TestCase {
     }
 
     /**
-     * @return void
+     * @test
      */
-    public function test_getBodyLayout() {
+    public function getBodyLayout() {
         $layout = new PhtmlView();
         $layout->setBasePath('tests/resources');
         $layout->setTemplate('layouts/unit-testing.phtml');
@@ -123,9 +123,9 @@ class PhtmlViewTest extends \PHPUnit_Framework_TestCase {
     }
 
     /**
-     * @return void
+     * @test
      */
-    public function test_getResponseHeaders() {
+    public function getResponseHeaders() {
         $expected = array(
             'Content-Type' => 'text/html'
         );
@@ -134,9 +134,9 @@ class PhtmlViewTest extends \PHPUnit_Framework_TestCase {
     }
 
     /**
-     * @return void
+     * @test
      */
-    public function test_render() {
+    public function render() {
         $layout = new PhtmlView();
         $layout->setBasePath('tests/resources');
         $layout->setTemplate('layouts/unit-testing.phtml');
@@ -145,10 +145,10 @@ class PhtmlViewTest extends \PHPUnit_Framework_TestCase {
     }
 
     /**
-     * @return void
+     * @test
      * @expectedException \Flex\View\Exception\ViewException
      */
-    public function test_renderInvalid() {
+    public function renderInvalid() {
         $layout = new PhtmlView();
         $layout->setBasePath('tests/resources');
         $layout->setTemplate('layouts/unit-testing.phtml');

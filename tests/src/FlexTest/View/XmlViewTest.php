@@ -13,9 +13,9 @@ use Flex\View\XmlView;
 class XmlViewTest extends \PHPUnit_Framework_TestCase {
 
     /**
-     * @return void
+     * @test
      */
-    public function test_getBody() {
+    public function getBody() {
         $converter = new ArrayToXml();
 
         $data = array('foo' => 'bar');
@@ -28,9 +28,9 @@ class XmlViewTest extends \PHPUnit_Framework_TestCase {
     }
 
     /**
-     * @return void
+     * @test
      */
-    public function test_getResponseHeaders() {
+    public function getResponseHeaders() {
         $view = new XmlView();
 
         $expected = array(

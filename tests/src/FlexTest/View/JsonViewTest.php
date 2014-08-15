@@ -12,9 +12,9 @@ use Flex\View\JsonView;
 class JsonViewTest extends \PHPUnit_Framework_TestCase {
 
     /**
-     * @return void
+     * @test
      */
-    public function test_getBody() {
+    public function getBody() {
         $data = array('foo' => 'bar');
         $expected = json_encode($data);
 
@@ -25,9 +25,9 @@ class JsonViewTest extends \PHPUnit_Framework_TestCase {
     }
 
     /**
-     * @return void
+     * @test
      */
-    public function test_getResponseHeaders() {
+    public function getResponseHeaders() {
         $view = new JsonView();
 
         $expected = array(

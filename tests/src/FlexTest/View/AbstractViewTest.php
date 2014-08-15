@@ -31,9 +31,9 @@ class AbstractViewTest extends \PHPUnit_Framework_TestCase {
     }
 
     /**
-     * @return void
+     * @test
      */
-    public function test_setData() {
+    public function setData() {
         $expected = array('foo' => 'bar');
         $this->view->setData($expected);
 
@@ -41,9 +41,9 @@ class AbstractViewTest extends \PHPUnit_Framework_TestCase {
     }
 
     /**
-     * @return void
+     * @test
      */
-    public function test_setPropertyMagic() {
+    public function setPropertyMagic() {
         $expected = uniqid();
         $this->view->title = $expected;
 
@@ -52,9 +52,9 @@ class AbstractViewTest extends \PHPUnit_Framework_TestCase {
     }
 
     /**
-     * @return void
+     * @test
      */
-    public function test_setProperty() {
+    public function setProperty() {
         $expected = uniqid();
         $this->view->set('title', $expected);
 

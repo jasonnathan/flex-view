@@ -12,9 +12,9 @@ use Flex\View\WddxView;
 class WddxViewTest extends \PHPUnit_Framework_TestCase {
 
     /**
-     * @return void
+     * @test
      */
-    public function test_getBody() {
+    public function getBody() {
         $data = array('foo' => 'bar');
         $expected = wddx_serialize_value($data);
 
@@ -25,9 +25,9 @@ class WddxViewTest extends \PHPUnit_Framework_TestCase {
     }
 
     /**
-     * @return void
+     * @test
      */
-    public function test_getResponseHeaders() {
+    public function getResponseHeaders() {
         $view = new WddxView();
 
         $expected = array(
