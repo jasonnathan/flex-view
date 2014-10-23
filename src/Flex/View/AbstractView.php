@@ -4,7 +4,6 @@ namespace Flex\View;
 /**
  * Class AbstractView
  *
- * @package Flex\View
  * @author Jeff Tunessen <jeff.tunessen@gmail.com>
  */
 abstract class AbstractView implements ViewInterface {

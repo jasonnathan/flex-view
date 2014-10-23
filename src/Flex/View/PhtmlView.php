@@ -6,7 +6,6 @@ use Flex\View\Exception\ViewException;
 /**
  * Class PhtmlView
  *
- * @package Flex\View
  * @author Jeff Tunessen <jeff.tunessen@gmail.com>
  */
 class PhtmlView extends AbstractView implements ViewInterface {

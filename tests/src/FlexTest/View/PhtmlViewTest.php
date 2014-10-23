@@ -6,7 +6,6 @@ use Flex\View\PhtmlView;
 /**
  * Class PhtmlViewTest
  *
- * @package FlexTest\View
  * @author Jeff Tunessen <jeff.tunessen@gmail.com>
  */
 class PhtmlViewTest extends \PHPUnit_Framework_TestCase {

@@ -6,7 +6,6 @@ use Flex\View\AbstractView;
 /**
  * Class AbstractViewTest
  *
- * @package FlexTest\View
  * @author Jeff Tunessen <jeff.tunessen@gmail.com>
  */
 class AbstractViewTest extends \PHPUnit_Framework_TestCase {

@@ -4,7 +4,6 @@ namespace Flex\View;
 /**
  * Class JsonView
  *
- * @package Flex\View
  * @author Jeff Tunessen <jeff.tunessen@gmail.com>
  */
 class JsonView extends AbstractView implements ViewInterface {

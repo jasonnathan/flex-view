@@ -7,7 +7,6 @@ use Flex\View\XmlView;
 /**
  * Class XmlViewTest
  *
- * @package FlexTest\View
  * @author Jeff Tunessen <jeff.tunessen@gmail.com>
  */
 class XmlViewTest extends \PHPUnit_Framework_TestCase {

@@ -6,7 +6,6 @@ use Flex\View\JsonView;
 /**
  * Class JsonViewTest
  *
- * @package FlexTest\View
  * @author Jeff Tunessen <jeff.tunessen@gmail.com>
  */
 class JsonViewTest extends \PHPUnit_Framework_TestCase {

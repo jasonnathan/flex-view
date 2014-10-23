@@ -6,7 +6,6 @@ use Flex\Converter\ArrayToXml;
 /**
  * Class XmlView
  *
- * @package Flex\View
  * @author Jeff Tunessen <jeff.tunessen@gmail.com>
  */
 class XmlView extends AbstractView implements ViewInterface {
