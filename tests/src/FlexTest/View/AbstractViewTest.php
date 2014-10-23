@@ -20,7 +20,8 @@ class AbstractViewTest extends \PHPUnit_Framework_TestCase {
      * @return void
      */
     public function setUp() {
-        $this->view = $this->getMockBuilder('Flex\View\AbstractView')->getMockForAbstractClass();
+        $this->view = $this->getMockBuilder('Flex\View\AbstractView')
+                           ->getMockForAbstractClass();
     }
 
     /**
