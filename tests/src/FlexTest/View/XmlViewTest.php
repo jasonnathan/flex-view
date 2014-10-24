@@ -14,7 +14,7 @@ class XmlViewTest extends \PHPUnit_Framework_TestCase {
     /**
      * @test
      */
-    public function getBody() {
+    public function test_getBody() {
         $converter = new ArrayToXml();
 
         $data = array('foo' => 'bar');
@@ -29,7 +29,7 @@ class XmlViewTest extends \PHPUnit_Framework_TestCase {
     /**
      * @test
      */
-    public function getResponseHeaders() {
+    public function test_getResponseHeaders() {
         $view = new XmlView();
 
         $expected = array(

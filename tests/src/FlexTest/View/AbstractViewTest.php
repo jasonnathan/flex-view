@@ -19,8 +19,7 @@ class AbstractViewTest extends \PHPUnit_Framework_TestCase {
      * @return void
      */
     public function setUp() {
-        $this->view = $this->getMockBuilder('Flex\View\AbstractView')
-                           ->getMockForAbstractClass();
+        $this->view = $this->getMockBuilder('Flex\View\AbstractView')->getMockForAbstractClass();
     }
 
     /**
@@ -33,7 +32,7 @@ class AbstractViewTest extends \PHPUnit_Framework_TestCase {
     /**
      * @test
      */
-    public function setData() {
+    public function test_setData() {
         $expected = array('foo' => 'bar');
         $this->view->setData($expected);
 
@@ -43,7 +42,7 @@ class AbstractViewTest extends \PHPUnit_Framework_TestCase {
     /**
      * @test
      */
-    public function setPropertyMagic() {
+    public function test_setPropertyMagic() {
         $expected = uniqid();
         $this->view->title = $expected;
 
@@ -54,7 +53,7 @@ class AbstractViewTest extends \PHPUnit_Framework_TestCase {
     /**
      * @test
      */
-    public function setProperty() {
+    public function test_setProperty() {
         $expected = uniqid();
         $this->view->set('title', $expected);
 

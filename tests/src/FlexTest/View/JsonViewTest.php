@@ -13,7 +13,7 @@ class JsonViewTest extends \PHPUnit_Framework_TestCase {
     /**
      * @test
      */
-    public function getBody() {
+    public function test_getBody() {
         $data = array('foo' => 'bar');
         $expected = json_encode($data);
 
@@ -26,7 +26,7 @@ class JsonViewTest extends \PHPUnit_Framework_TestCase {
     /**
      * @test
      */
-    public function getResponseHeaders() {
+    public function test_getResponseHeaders() {
         $view = new JsonView();
 
         $expected = array(

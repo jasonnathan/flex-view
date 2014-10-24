@@ -32,7 +32,7 @@ class PhtmlViewTest extends \PHPUnit_Framework_TestCase {
     /**
      * @test
      */
-    public function setBasePath() {
+    public function test_setBasePath() {
         $expexted = 'foo/bar/baz';
         $this->view->setBasePath($expexted);
         $this->assertEquals($expexted, $this->view->getBasePath());
@@ -43,14 +43,14 @@ class PhtmlViewTest extends \PHPUnit_Framework_TestCase {
      * @expectedException \Flex\View\Exception\ViewException
      * @expectedExceptionMessage missing base path
      */
-    public function setBasePathEmpty() {
+    public function test_setBasePathEmpty() {
         $this->view->setBasePath('  ');
     }
 
     /**
      * @test
      */
-    public function setTemplate() {
+    public function test_setTemplate() {
         $expexted = 'template';
         $this->view->setTemplate($expexted);
         $this->assertEquals($expexted, $this->view->getTemplate());
@@ -61,7 +61,7 @@ class PhtmlViewTest extends \PHPUnit_Framework_TestCase {
      * @expectedException \Flex\View\Exception\ViewException
      * @expectedExceptionMessage missing template
      */
-    public function setTemplateEmpty() {
+    public function test_setTemplateEmpty() {
         $this->view->setTemplate('  ');
     }
 
@@ -70,7 +70,7 @@ class PhtmlViewTest extends \PHPUnit_Framework_TestCase {
      * @expectedException \Flex\View\Exception\ViewException
      * @expectedExceptionMessage missing view base path
      */
-    public function getBodyInvalidBasePath() {
+    public function test_getBodyInvalidBasePath() {
         $this->view->getBody();
     }
 
@@ -79,7 +79,7 @@ class PhtmlViewTest extends \PHPUnit_Framework_TestCase {
      * @expectedException \Flex\View\Exception\ViewException
      * @expectedExceptionMessage missing template
      */
-    public function getBodyInvalidTemplate() {
+    public function test_getBodyInvalidTemplate() {
         $this->view->setBasePath('tests/resources');
         $this->view->getBody();
     }
@@ -88,7 +88,7 @@ class PhtmlViewTest extends \PHPUnit_Framework_TestCase {
      * @test
      * @expectedException \Flex\View\Exception\ViewException
      */
-    public function getBodyInvalidView() {
+    public function test_getBodyInvalidView() {
         $this->view->setBasePath('tests/resources');
         $this->view->setTemplate('views/script-not-found.phtml');
         $this->view->getBody();
@@ -97,7 +97,7 @@ class PhtmlViewTest extends \PHPUnit_Framework_TestCase {
     /**
      * @test
      */
-    public function getBody() {
+    public function test_getBody() {
         $this->view->setBasePath('tests/resources');
         $this->view->setTemplate('views/unit-testing/profile-settings.phtml');
         $this->view->name = 'foo';
@@ -107,7 +107,7 @@ class PhtmlViewTest extends \PHPUnit_Framework_TestCase {
     /**
      * @test
      */
-    public function getBodyLayout() {
+    public function test_getBodyLayout() {
         $layout = new PhtmlView();
         $layout->setBasePath('tests/resources');
         $layout->setTemplate('layouts/unit-testing.phtml');
@@ -124,7 +124,7 @@ class PhtmlViewTest extends \PHPUnit_Framework_TestCase {
     /**
      * @test
      */
-    public function getResponseHeaders() {
+    public function test_getResponseHeaders() {
         $expected = array(
             'Content-Type' => 'text/html'
         );
@@ -135,7 +135,7 @@ class PhtmlViewTest extends \PHPUnit_Framework_TestCase {
     /**
      * @test
      */
-    public function render() {
+    public function test_render() {
         $layout = new PhtmlView();
         $layout->setBasePath('tests/resources');
         $layout->setTemplate('layouts/unit-testing.phtml');
@@ -147,7 +147,7 @@ class PhtmlViewTest extends \PHPUnit_Framework_TestCase {
      * @test
      * @expectedException \Flex\View\Exception\ViewException
      */
-    public function renderInvalid() {
+    public function test_renderInvalid() {
         $layout = new PhtmlView();
         $layout->setBasePath('tests/resources');
         $layout->setTemplate('layouts/unit-testing.phtml');
