@@ -3,5 +3,6 @@
 /build
 /public
 /vendor
+build.properties.jenkins
 build.properties.local
 composer.lock
