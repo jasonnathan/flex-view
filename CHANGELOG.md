@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 2.0.4
+
+- just some coding conventions
+
 ## 2.0.3
 
 - just some coding conventions
