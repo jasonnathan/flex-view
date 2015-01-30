@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 2.0.5
+
+- bugfix view data
+
 ## 2.0.4
 
 - just some coding conventions

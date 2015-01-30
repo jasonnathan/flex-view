@@ -9,9 +9,9 @@ namespace Flex\View;
 abstract class AbstractView implements ViewInterface {
 
     /**
-     * @var mixed
+     * @var array
      */
-    private $data;
+    private $data = array();
 
     /**
      * @return array
@@ -24,8 +24,7 @@ abstract class AbstractView implements ViewInterface {
      * @param array $data
      */
     public function setData(array $data = array()) {
-        $this->data = is_array($this->data) ? $this->data : array();
-        $this->data = array_merge($this->data, $data);
+        $this->data = $data;
     }
 
     /**
